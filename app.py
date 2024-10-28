@@ -6,8 +6,7 @@ from langchain.prompts import PromptTemplate
 
 load_dotenv()
 
-api_key = os.getenv("GROQ_API_KEY")
-llm = ChatGroq(groq_api_key=api_key, model="Gemma-7b-It")
+llm = ChatGroq(groq_api_key=os.getenv("GROQ_API_KEY"), model="Gemma-7b-It")
 prompt_template = """
 Generate an email based on the following details. Ensure the email aligns with the specified tone, length, and style preferences.
 
